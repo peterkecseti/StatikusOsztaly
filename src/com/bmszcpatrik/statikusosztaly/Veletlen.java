@@ -55,10 +55,10 @@ public final class Veletlen {
         return keresztNev;
     }
     private static String velNoiKeresztnev() {
-    return NOI_KERESZTNEVEK.get(NOI_KERESZTNEVEK.size());
+    return NOI_KERESZTNEVEK.get(r.nextInt(NOI_KERESZTNEVEK.size()));
     }
     private static String velFerfiKeresztnev() {
-    return FERFI_KERESZTNEVEK.get(FERFI_KERESZTNEVEK.size());
+    return FERFI_KERESZTNEVEK.get(r.nextInt(FERFI_KERESZTNEVEK.size()));
     }
     /**
      * Véletlen nevet generál a megadott paraméterek alapján.

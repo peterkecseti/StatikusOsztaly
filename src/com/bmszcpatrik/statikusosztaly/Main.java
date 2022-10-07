@@ -12,8 +12,8 @@ public class Main {
         }
         System.out.println("--------------------------------------");
         for (int i = 0; i < 10; i++) {
-            Veletlen.velTeljesNev(true);
-            Veletlen.velTeljesNev(false);
+            System.out.println(Veletlen.velTeljesNev(true));
+            System.out.println(Veletlen.velTeljesNev(false));
         }
     }
 }
