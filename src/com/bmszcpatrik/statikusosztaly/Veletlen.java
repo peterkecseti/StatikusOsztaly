@@ -35,4 +35,39 @@ public final class Veletlen {
     public static char velKarakter(char min, char max){
         return (char)velEgesz(min, max);
     }
+    public static String velVezeteknev(){
+        return VEZETEK_NEVEK.get(r.nextInt(VEZETEK_NEVEK.size()));
+    }
+
+    /**
+     * Véletlen keresztnevet generál a megadott paraméterek alapján.
+     * Paraméter értékétől függően férfi vagy női keresztnevet.
+     * @param nem A generált név neme. Férfi ha igaz (true), nő ha hamis (false).
+     * @return Generált keresztnév.
+     */
+    public static String velKeresztnev(boolean nem){
+        String keresztNev;
+        if (nem){
+         keresztNev = velFerfiKeresztnev();
+        }else{
+        keresztNev = velNoiKeresztnev();
+        }
+        return keresztNev;
+    }
+    private static String velNoiKeresztnev() {
+    return NOI_KERESZTNEVEK.get(NOI_KERESZTNEVEK.size());
+    }
+    private static String velFerfiKeresztnev() {
+    return FERFI_KERESZTNEVEK.get(FERFI_KERESZTNEVEK.size());
+    }
+    /**
+     * Véletlen nevet generál a megadott paraméterek alapján.
+     * Paraméter értékétől függően férfi vagy női keresztnevet.
+     * @param nem A generált név neme. Férfi ha igaz (true), nő ha hamis (false).
+     * @return Generált teljes név.
+     */
+    public static String velTeljesNev(boolean nem){
+        return velVezeteknev() + " " + velKeresztnev(nem);
+    }
+
 }
